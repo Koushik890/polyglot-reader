@@ -1,8 +1,9 @@
 # Past chat logs and documentation
 Past Chats/
 
-# Design screenshots and assets (not part of app code)
-Polygot Reader_screens/
+# Design files (not part of app code)
+design/
+design.json
 
 # Temporary files and build artifacts
 .tmp/
