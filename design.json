@@ -1,0 +1,1011 @@
+{
+  "meta": {
+    "name": "Polyglot Reader — Mint Outline Design System",
+    "version": "1.0.0",
+    "intendedUse": "High-level creative-direction + design-token reference for AI and humans to recreate the same UI look consistently across the Polyglot Reader app family (mobile/web/desktop).",
+    "sourceInspiration": {
+      "description": "Screenshot shows a friendly e-book app UI: white surfaces, mint-green accents, pill-shaped controls, outlined chips, framed book covers, and simple line icons. Visual language is calm, approachable, and modern with generous whitespace.",
+      "keyScreensObserved": [
+        "Welcome / onboarding with illustration + CTA",
+        "Home feed with search, category chips, book cards, bottom nav",
+        "Book details with top bar, cover hero, tags, CTA action bar"
+      ]
+    }
+  },
+  "brand": {
+    "personality": [
+      "Calm",
+      "Friendly",
+      "Minimal",
+      "Readable",
+      "Slightly playful (rounded geometry + illustration)"
+    ],
+    "designIntent": "Make reading feel effortless and inviting. UI should feel like a well-designed notebook: clean white paper, light outlines, a soft mint highlight, and simple, confident typography.",
+    "nonNegotiables": [
+      "Pill geometry: inputs, chips, CTAs, and nav containers are rounded to the extreme (radius=pill).",
+      "Outline-first: rely on borders and spacing; use shadows sparingly and softly.",
+      "High whitespace: avoid dense screens; group content with clear vertical rhythm.",
+      "Legibility first: type hierarchy must be obvious; body copy never cramped.",
+      "Mint is the only strong accent color; everything else is neutral."
+    ],
+    "copyTone": {
+      "voice": "Warm, concise, encouraging.",
+      "titles": "Short, benefit-led, Title Case (e.g., “Continue Reading”).",
+      "microcopy": "Direct, calm (e.g., “Search anything…”, “Read This Book”)."
+    }
+  },
+  "designPrinciples": [
+    "Soft Geometry: rounded rectangles and circles dominate; sharp corners are avoided.",
+    "Outline-First Minimalism: use 1–2dp borders and subtle dividers to define structure instead of heavy fills.",
+    "Paper + Mint: white surfaces like paper; mint is the calm anchor for actions and navigation.",
+    "Readable Density: content breathes; text blocks are short; spacing is consistent and generous.",
+    "Friendly Icons: simple line icons with rounded caps; icons live inside circular buttons when actionable.",
+    "Components Over Decoration: ornamentation is minimal; polish comes from proportions, alignment, and rhythm."
+  ],
+  "layout": {
+    "screen": {
+      "background": "{tokens.color.roles.background.app}",
+      "safeArea": "Always respect safe area; do not place interactive UI under notches/home indicators."
+    },
+    "grid": {
+      "type": "Single-column mobile layout",
+      "contentPaddingX": 24,
+      "contentPaddingY": 16,
+      "sectionGapY": 20,
+      "maxReadableTextWidth": "On larger devices, cap text column to ~360–420dp and center it."
+    },
+    "rhythm": {
+      "baseline": 4,
+      "recommendedVerticalCadence": [
+        "8dp between label and field",
+        "12–16dp between tightly-related items (title + subtitle)",
+        "20–24dp between sections",
+        "32dp between major screen blocks"
+      ]
+    }
+  },
+  "tokens": {
+    "units": {
+      "spacing": "dp",
+      "type": "sp",
+      "radius": "dp",
+      "stroke": "dp",
+      "shadow": "dp"
+    },
+    "color": {
+      "palette": {
+        "brandMint": {
+          "50": "#EAF7F0",
+          "100": "#D7F0E4",
+          "200": "#BDE6D2",
+          "300": "#9FD9BD",
+          "400": "#86CDAA",
+          "500": "#79B89B",
+          "600": "#5FAF8D",
+          "700": "#3E8F6E",
+          "800": "#2D6E55",
+          "900": "#1F4D3C"
+        },
+        "neutral": {
+          "0": "#FFFFFF",
+          "50": "#FAFAFA",
+          "100": "#F5F6F7",
+          "200": "#E9ECEF",
+          "300": "#D6DADF",
+          "400": "#B8C0CA",
+          "500": "#7A8593",
+          "600": "#55616F",
+          "700": "#313A45",
+          "800": "#1C232B",
+          "900": "#0B0D10"
+        },
+        "semantic": {
+          "success": {
+            "bg": "#E9F8EF",
+            "fg": "#2E7D52"
+          },
+          "warning": {
+            "bg": "#FFF6E5",
+            "fg": "#9A6B1E"
+          },
+          "danger": {
+            "bg": "#FEECEC",
+            "fg": "#B42318"
+          }
+        }
+      },
+      "roles": {
+        "background": {
+          "app": "#FFFFFF",
+          "appTint": "#F4FBF7",
+          "surface": "#FFFFFF",
+          "surfaceMuted": "#F5F6F7",
+          "surfaceElevated": "#FFFFFF"
+        },
+        "text": {
+          "primary": "#0B0D10",
+          "secondary": "#55616F",
+          "tertiary": "#7A8593",
+          "inverse": "#FFFFFF",
+          "onBrand": "#0B0D10"
+        },
+        "outline": {
+          "subtle": "#D6DADF",
+          "default": "#C8CED6",
+          "strong": "#0B0D10",
+          "divider": "#E9ECEF"
+        },
+        "brand": {
+          "primary": "#79B89B",
+          "primaryPressed": "#5FAF8D",
+          "primarySoft": "#D7F0E4",
+          "link": "#3E8F6E"
+        },
+        "action": {
+          "primaryBg": "#79B89B",
+          "primaryFg": "#FFFFFF",
+          "secondaryBg": "#FFFFFF",
+          "secondaryFg": "#0B0D10",
+          "secondaryBorder": "#0B0D10",
+          "ghostFg": "#3E8F6E"
+        },
+        "chip": {
+          "defaultBg": "#FFFFFF",
+          "defaultFg": "#0B0D10",
+          "defaultBorder": "#C8CED6",
+          "selectedBg": "#1C232B",
+          "selectedFg": "#FFFFFF",
+          "selectedBorder": "#1C232B"
+        },
+        "navigation": {
+          "bottomBarBg": "#79B89B",
+          "bottomBarFg": "#FFFFFF",
+          "bottomBarActiveIndicatorBg": "#FFFFFF",
+          "bottomBarActiveIndicatorFg": "#0B0D10"
+        },
+        "focus": {
+          "ring": "#79B89B"
+        }
+      }
+    },
+    "typography": {
+      "fontFamilies": {
+        "primary": "Plus Jakarta Sans",
+        "fallbacks": [
+          "System",
+          "Inter",
+          "SF Pro Text",
+          "Segoe UI",
+          "Roboto"
+        ],
+        "implementationHintMobile": "Use the existing Expo-loaded families: PlusJakartaSans_400Regular/500Medium/600SemiBold/700Bold/800ExtraBold via AppText/AppTextInput."
+      },
+      "scale": {
+        "display": {
+          "fontSize": 32,
+          "lineHeight": 38,
+          "fontWeight": 800,
+          "letterSpacing": -0.8
+        },
+        "h1": {
+          "fontSize": 24,
+          "lineHeight": 32,
+          "fontWeight": 700,
+          "letterSpacing": -0.5
+        },
+        "h2": {
+          "fontSize": 20,
+          "lineHeight": 28,
+          "fontWeight": 700,
+          "letterSpacing": -0.3
+        },
+        "h3": {
+          "fontSize": 18,
+          "lineHeight": 24,
+          "fontWeight": 600,
+          "letterSpacing": -0.2
+        },
+        "body": {
+          "fontSize": 16,
+          "lineHeight": 22,
+          "fontWeight": 400,
+          "letterSpacing": 0
+        },
+        "bodyMedium": {
+          "fontSize": 16,
+          "lineHeight": 22,
+          "fontWeight": 500,
+          "letterSpacing": 0
+        },
+        "small": {
+          "fontSize": 14,
+          "lineHeight": 20,
+          "fontWeight": 500,
+          "letterSpacing": 0
+        },
+        "caption": {
+          "fontSize": 12,
+          "lineHeight": 16,
+          "fontWeight": 500,
+          "letterSpacing": 0
+        },
+        "button": {
+          "fontSize": 16,
+          "lineHeight": 20,
+          "fontWeight": 600,
+          "letterSpacing": 0.3
+        },
+        "buttonLarge": {
+          "fontSize": 18,
+          "lineHeight": 22,
+          "fontWeight": 700,
+          "letterSpacing": 0.4
+        }
+      },
+      "rules": [
+        "Headings are bold and slightly tight (negative letterSpacing).",
+        "Body text uses comfortable lineHeight (>= 1.35x).",
+        "Avoid ultra-light weights; use 400–800 only.",
+        "Use sentence case for descriptions; Title Case for section headings.",
+        "Limit paragraphs to 2–4 lines per block on mobile."
+      ]
+    },
+    "spacing": {
+      "scale": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 24,
+        "8": 32,
+        "10": 40,
+        "12": 48,
+        "16": 64
+      },
+      "layoutPresets": {
+        "screenPaddingX": 24,
+        "screenPaddingY": 16,
+        "cardPadding": 16,
+        "chipPaddingX": 12,
+        "chipPaddingY": 8,
+        "stackGapTight": 8,
+        "stackGap": 12,
+        "sectionGap": 20,
+        "heroGap": 24
+      }
+    },
+    "radius": {
+      "sm": 8,
+      "md": 12,
+      "lg": 16,
+      "xl": 20,
+      "2xl": 24,
+      "pill": 9999
+    },
+    "border": {
+      "width": {
+        "hairline": 1,
+        "thin": 1.5,
+        "thick": 2
+      },
+      "styleRules": [
+        "Default card/input border is subtle (1dp neutral outline).",
+        "Icon buttons and secondary actions may use a stronger border (1.5–2dp).",
+        "Avoid heavy strokes everywhere; let mint + spacing do the work."
+      ]
+    },
+    "shadow": {
+      "rules": [
+        "Mostly flat. Shadows only for floating elements (bottom nav, elevated cards, modals).",
+        "Shadows are soft, wide, low-opacity; never harsh or high-contrast."
+      ],
+      "presets": {
+        "none": {
+          "shadowColor": "transparent",
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowOpacity": 0,
+          "shadowRadius": 0,
+          "elevation": 0
+        },
+        "soft": {
+          "shadowColor": "#000000",
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 6,
+          "shadowOpacity": 0.08,
+          "shadowRadius": 16,
+          "elevation": 4
+        },
+        "lifted": {
+          "shadowColor": "#000000",
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 10,
+          "shadowOpacity": 0.12,
+          "shadowRadius": 24,
+          "elevation": 8
+        }
+      }
+    },
+    "iconography": {
+      "style": "Simple line icons with rounded caps/joins; confident stroke; minimal detail.",
+      "strokeWidth": {
+        "default": 2,
+        "emphasis": 2.5
+      },
+      "sizes": {
+        "sm": 16,
+        "md": 20,
+        "lg": 24
+      },
+      "color": {
+        "default": "{tokens.color.roles.text.primary}",
+        "muted": "{tokens.color.roles.text.secondary}",
+        "inverse": "{tokens.color.roles.text.inverse}"
+      }
+    },
+    "motion": {
+      "principles": [
+        "Subtle and fast; motion supports comprehension, not decoration.",
+        "Prefer fades + small translations; avoid bouncy overshoot unless it communicates a press."
+      ],
+      "durationsMs": {
+        "instant": 80,
+        "fast": 140,
+        "medium": 220,
+        "slow": 320
+      },
+      "easing": {
+        "standard": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "out": "cubic-bezier(0, 0, 0.2, 1)",
+        "in": "cubic-bezier(0.4, 0, 1, 1)"
+      },
+      "microInteractions": {
+        "press": "Scale to 0.98 + slight opacity change (0.95) over 80–140ms.",
+        "navSelection": "Move active indicator with 180–220ms ease-out."
+      }
+    },
+    "illustration": {
+      "style": [
+        "Hand-drawn vector look",
+        "Thick black outlines",
+        "Flat pastel fills",
+        "Minimal/no gradients"
+      ],
+      "usage": [
+        "Onboarding and empty states only",
+        "Keep illustrations secondary to the main message",
+        "Always pair with a single clear CTA"
+      ]
+    }
+  },
+  "components": {
+    "AppShell": {
+      "purpose": "Default screen container providing consistent padding, background, and safe-area behavior.",
+      "style": {
+        "backgroundColor": "{tokens.color.roles.background.app}",
+        "contentPaddingX": "{tokens.spacing.layoutPresets.screenPaddingX}",
+        "contentPaddingY": "{tokens.spacing.layoutPresets.screenPaddingY}"
+      },
+      "notes": [
+        "If a screen has a bottom CTA bar, add extra bottom padding so content doesn't sit behind it.",
+        "Prefer ScrollView with generous `contentContainerStyle` padding."
+      ]
+    },
+    "TopAppBar": {
+      "purpose": "Lightweight header bar with title and icon actions (close/back, overflow, notifications).",
+      "anatomy": [
+        "Left action (IconButton) OR avatar cluster",
+        "Center title",
+        "Right actions (IconButton group)"
+      ],
+      "style": {
+        "height": 56,
+        "backgroundColor": "{tokens.color.roles.background.surface}",
+        "bottomDivider": {
+          "height": 1,
+          "color": "{tokens.color.roles.outline.divider}"
+        },
+        "titleTypography": "{tokens.typography.scale.h3}",
+        "titleColor": "{tokens.color.roles.text.primary}"
+      },
+      "iconButtons": "Use `IconButton` circular outlined style; never bare icons floating without tap affordance."
+    },
+    "BottomNav": {
+      "purpose": "Primary navigation. A single floating pill container (mint) with icon tabs.",
+      "style": {
+        "container": {
+          "height": 64,
+          "marginX": 24,
+          "marginBottom": 14,
+          "padding": 10,
+          "borderRadius": 28,
+          "backgroundColor": "{tokens.color.roles.navigation.bottomBarBg}",
+          "shadow": "{tokens.shadow.presets.soft}"
+        },
+        "item": {
+          "hitTargetMin": 44,
+          "iconSize": "{tokens.iconography.sizes.lg}",
+          "iconColor": "{tokens.color.roles.navigation.bottomBarFg}"
+        },
+        "activeIndicator": {
+          "size": 44,
+          "borderRadius": 22,
+          "backgroundColor": "{tokens.color.roles.navigation.bottomBarActiveIndicatorBg}",
+          "iconColor": "{tokens.color.roles.navigation.bottomBarActiveIndicatorFg}"
+        }
+      },
+      "notes": [
+        "No labels by default (icon-only). If labels are required, keep them tiny and only show on active.",
+        "Nav should feel like a friendly remote-control: big, pill-shaped, and obvious."
+      ]
+    },
+    "SectionHeader": {
+      "purpose": "Section title with optional right-side action (e.g., “See All”).",
+      "style": {
+        "gapY": 8,
+        "titleTypography": "{tokens.typography.scale.h3}",
+        "titleColor": "{tokens.color.roles.text.primary}",
+        "actionTypography": "{tokens.typography.scale.small}",
+        "actionColor": "{tokens.color.roles.brand.link}"
+      },
+      "rules": [
+        "Keep left title short (1–3 words).",
+        "Right action is a text link; no chevrons unless needed."
+      ]
+    },
+    "Button": {
+      "purpose": "Primary and secondary actions with pill geometry.",
+      "base": {
+        "minHeight": 52,
+        "paddingX": 22,
+        "borderRadius": "{tokens.radius.pill}",
+        "typography": "{tokens.typography.scale.buttonLarge}",
+        "contentGap": 10
+      },
+      "variants": {
+        "primary": {
+          "backgroundColor": "{tokens.color.roles.action.primaryBg}",
+          "textColor": "{tokens.color.roles.action.primaryFg}",
+          "borderWidth": 0,
+          "shadow": "{tokens.shadow.presets.soft}"
+        },
+        "secondary": {
+          "backgroundColor": "{tokens.color.roles.action.secondaryBg}",
+          "textColor": "{tokens.color.roles.action.secondaryFg}",
+          "borderWidth": "{tokens.border.width.thick}",
+          "borderColor": "{tokens.color.roles.action.secondaryBorder}",
+          "shadow": "{tokens.shadow.presets.none}"
+        },
+        "ghost": {
+          "backgroundColor": "transparent",
+          "textColor": "{tokens.color.roles.action.ghostFg}",
+          "borderWidth": 0
+        }
+      },
+      "states": {
+        "pressed": {
+          "primaryBg": "{tokens.color.roles.brand.primaryPressed}",
+          "opacity": 0.98,
+          "scale": 0.98
+        },
+        "disabled": {
+          "opacity": 0.45
+        }
+      },
+      "rules": [
+        "Buttons should look like big friendly pills (never sharp).",
+        "Only one primary button per screen section; secondary actions are outlined.",
+        "Use icon+label sparingly; if used, icon is line-style and aligned left of text."
+      ]
+    },
+    "IconButton": {
+      "purpose": "Tappable icon inside a circular affordance.",
+      "style": {
+        "size": 40,
+        "borderRadius": 20,
+        "backgroundColor": "{tokens.color.roles.background.surface}",
+        "borderWidth": "{tokens.border.width.thin}",
+        "borderColor": "{tokens.color.roles.outline.strong}",
+        "iconSize": "{tokens.iconography.sizes.md}",
+        "iconColor": "{tokens.color.roles.text.primary}"
+      },
+      "states": {
+        "pressed": {
+          "backgroundColor": "{tokens.color.roles.background.surfaceMuted}"
+        },
+        "disabled": {
+          "opacity": 0.45
+        }
+      }
+    },
+    "TextInput": {
+      "purpose": "Single-line input field. Used for search and forms.",
+      "style": {
+        "height": 44,
+        "borderRadius": "{tokens.radius.pill}",
+        "paddingX": 16,
+        "backgroundColor": "{tokens.color.roles.background.surface}",
+        "borderWidth": "{tokens.border.width.hairline}",
+        "borderColor": "{tokens.color.roles.outline.default}",
+        "textColor": "{tokens.color.roles.text.primary}",
+        "placeholderColor": "{tokens.color.roles.text.tertiary}",
+        "typography": "{tokens.typography.scale.body}"
+      },
+      "states": {
+        "focused": {
+          "borderColor": "{tokens.color.roles.brand.primary}",
+          "focusRing": "Optional: subtle outer glow using brand.primarySoft"
+        },
+        "error": {
+          "borderColor": "{tokens.color.palette.semantic.danger.fg}"
+        }
+      }
+    },
+    "SearchBar": {
+      "purpose": "Search input with leading icon; visually identical to TextInput but with icon slot.",
+      "anatomy": [
+        "Leading search icon",
+        "Placeholder / query text",
+        "Optional trailing clear button (IconButton-lite)"
+      ],
+      "style": {
+        "container": "Use TextInput base style, add icon padding and slots.",
+        "leadingIcon": {
+          "size": "{tokens.iconography.sizes.md}",
+          "color": "{tokens.color.roles.text.tertiary}"
+        },
+        "clearButton": {
+          "size": 32,
+          "borderRadius": 16,
+          "backgroundColor": "{tokens.color.roles.background.surfaceMuted}"
+        }
+      }
+    },
+    "Chip": {
+      "purpose": "Category filter pills (e.g., All, Fiction, Romance).",
+      "base": {
+        "height": 34,
+        "paddingX": 14,
+        "borderRadius": "{tokens.radius.pill}",
+        "typography": "{tokens.typography.scale.small}"
+      },
+      "variants": {
+        "default": {
+          "backgroundColor": "{tokens.color.roles.chip.defaultBg}",
+          "textColor": "{tokens.color.roles.chip.defaultFg}",
+          "borderWidth": "{tokens.border.width.hairline}",
+          "borderColor": "{tokens.color.roles.chip.defaultBorder}"
+        },
+        "selected": {
+          "backgroundColor": "{tokens.color.roles.chip.selectedBg}",
+          "textColor": "{tokens.color.roles.chip.selectedFg}",
+          "borderWidth": "{tokens.border.width.hairline}",
+          "borderColor": "{tokens.color.roles.chip.selectedBorder}"
+        }
+      },
+      "rules": [
+        "Chips scroll horizontally when there are many.",
+        "Only one selected chip in a set (unless explicitly multi-select).",
+        "Avoid icons inside chips unless needed for meaning."
+      ]
+    },
+    "Card": {
+      "purpose": "Base container for content blocks. Used for book cards, framed covers, list tiles.",
+      "style": {
+        "backgroundColor": "{tokens.color.roles.background.surface}",
+        "borderRadius": "{tokens.radius.lg}",
+        "borderWidth": "{tokens.border.width.hairline}",
+        "borderColor": "{tokens.color.roles.outline.subtle}",
+        "padding": "{tokens.spacing.layoutPresets.cardPadding}",
+        "shadow": "{tokens.shadow.presets.none}"
+      },
+      "variants": {
+        "elevated": {
+          "shadow": "{tokens.shadow.presets.soft}"
+        },
+        "outlineStrong": {
+          "borderWidth": "{tokens.border.width.thin}",
+          "borderColor": "{tokens.color.roles.outline.strong}"
+        }
+      }
+    },
+    "BookCard": {
+      "purpose": "A compact, tappable book tile for shelves/carousels.",
+      "anatomy": [
+        "Cover frame (image)",
+        "Title (2 lines max)",
+        "Author (1 line)"
+      ],
+      "style": {
+        "container": {
+          "width": 160,
+          "borderRadius": "{tokens.radius.lg}",
+          "borderWidth": "{tokens.border.width.hairline}",
+          "borderColor": "{tokens.color.roles.outline.subtle}",
+          "backgroundColor": "{tokens.color.roles.background.surface}",
+          "padding": 12
+        },
+        "coverFrame": {
+          "borderRadius": "{tokens.radius.md}",
+          "borderWidth": "{tokens.border.width.hairline}",
+          "borderColor": "{tokens.color.roles.outline.subtle}",
+          "backgroundColor": "{tokens.color.roles.background.surfaceMuted}",
+          "aspectRatio": "3:4",
+          "overflow": "hidden"
+        },
+        "title": {
+          "typography": "{tokens.typography.scale.h3}",
+          "fontSizeOverride": 16,
+          "lineHeightOverride": 20,
+          "color": "{tokens.color.roles.text.primary}"
+        },
+        "author": {
+          "typography": "{tokens.typography.scale.caption}",
+          "color": "{tokens.color.roles.text.secondary}"
+        }
+      },
+      "rules": [
+        "Covers are always framed (never edge-to-edge).",
+        "Use consistent tile widths; allow horizontal scroll for shelves.",
+        "Avoid heavy shadows; the border defines the tile."
+      ]
+    },
+    "BookDetailsHero": {
+      "purpose": "Book detail top content: cover + title + author + tags.",
+      "style": {
+        "cover": {
+          "maxWidth": 220,
+          "borderRadius": "{tokens.radius.lg}",
+          "borderWidth": "{tokens.border.width.hairline}",
+          "borderColor": "{tokens.color.roles.outline.subtle}",
+          "shadow": "{tokens.shadow.presets.soft}"
+        },
+        "title": {
+          "typography": "{tokens.typography.scale.h2}",
+          "color": "{tokens.color.roles.text.primary}",
+          "textAlign": "center"
+        },
+        "author": {
+          "typography": "{tokens.typography.scale.small}",
+          "color": "{tokens.color.roles.text.secondary}",
+          "textAlign": "center"
+        },
+        "tags": "Use Chip default style in a wrap row."
+      }
+    },
+    "PaginationDots": {
+      "purpose": "Onboarding carousel indicator.",
+      "style": {
+        "dotSize": 7,
+        "dotGap": 6,
+        "inactiveColor": "{tokens.color.roles.outline.subtle}",
+        "activeColor": "{tokens.color.roles.brand.primary}"
+      },
+      "rules": [
+        "Keep subtle and small; never steal focus from illustration + headline."
+      ]
+    },
+    "Divider": {
+      "purpose": "Subtle separator for lists and app bars.",
+      "style": {
+        "height": 1,
+        "color": "{tokens.color.roles.outline.divider}",
+        "insetX": 0
+      }
+    },
+    "Avatar": {
+      "purpose": "User identity image (circle).",
+      "style": {
+        "sizes": {
+          "sm": 28,
+          "md": 36,
+          "lg": 44
+        },
+        "border": {
+          "width": 0,
+          "color": "transparent"
+        }
+      },
+      "rules": [
+        "If used in headers, pair with name + level in a tight vertical stack.",
+        "Avoid elaborate badges around avatar; keep it clean."
+      ]
+    },
+    "Badge": {
+      "purpose": "Small status or count indicator.",
+      "style": {
+        "minSize": 18,
+        "paddingX": 6,
+        "borderRadius": "{tokens.radius.pill}",
+        "typography": "{tokens.typography.scale.caption}",
+        "backgroundColor": "{tokens.color.roles.brand.primarySoft}",
+        "textColor": "{tokens.color.roles.text.primary}"
+      }
+    },
+    "ListItem": {
+      "purpose": "Row for settings, lists, and library items in vertical lists.",
+      "anatomy": [
+        "Leading icon/avatar",
+        "Title",
+        "Optional subtitle",
+        "Trailing chevron or action"
+      ],
+      "style": {
+        "container": "Use Card base with padding 14–16, radius 16.",
+        "titleTypography": "{tokens.typography.scale.bodyMedium}",
+        "subtitleTypography": "{tokens.typography.scale.caption}",
+        "gapX": 12
+      },
+      "rules": [
+        "Prefer Card rows instead of plain separators; it matches the outlined, friendly feel.",
+        "Don’t stack more than 2 lines of subtitle."
+      ]
+    },
+    "ActionBar": {
+      "purpose": "Persistent bottom call-to-action container (e.g., Book Details ‘Read This Book’).",
+      "style": {
+        "container": {
+          "height": 64,
+          "marginX": 24,
+          "marginBottom": 14,
+          "padding": 10,
+          "borderRadius": 28,
+          "backgroundColor": "{tokens.color.roles.brand.primary}",
+          "shadow": "{tokens.shadow.presets.soft}"
+        },
+        "leadingQuickAction": {
+          "type": "IconButton",
+          "style": {
+            "size": 44,
+            "backgroundColor": "{tokens.color.roles.background.surface}",
+            "borderWidth": "{tokens.border.width.hairline}",
+            "borderColor": "{tokens.color.roles.outline.subtle}"
+          }
+        },
+        "primaryCta": {
+          "type": "Button",
+          "variant": "secondary",
+          "note": "In the screenshot-inspired look, the CTA often becomes a white pill inside the mint bar."
+        }
+      },
+      "rules": [
+        "Treat as a ‘floating control bar’ — generous padding, rounded, and easy to tap.",
+        "Keep CTA label short (2–4 words)."
+      ]
+    },
+    "Modal": {
+      "purpose": "Centered dialog for confirmations and short forms.",
+      "style": {
+        "backgroundColor": "{tokens.color.roles.background.surface}",
+        "borderRadius": "{tokens.radius.2xl}",
+        "padding": 20,
+        "shadow": "{tokens.shadow.presets.lifted}"
+      }
+    },
+    "BottomSheet": {
+      "purpose": "Primary pattern for settings and reader controls; slides from bottom.",
+      "style": {
+        "backgroundColor": "{tokens.color.roles.background.surface}",
+        "topCornersRadius": "{tokens.radius.2xl}",
+        "padding": 20,
+        "handle": {
+          "width": 44,
+          "height": 5,
+          "borderRadius": "{tokens.radius.pill}",
+          "color": "{tokens.color.roles.outline.subtle}"
+        }
+      },
+      "rules": [
+        "Use for reader settings (font size, theme, translation toggles).",
+        "Rows inside sheet use ListItem style."
+      ]
+    },
+    "Toast": {
+      "purpose": "Non-blocking feedback (saved, copied, added to vocab).",
+      "style": {
+        "container": {
+          "backgroundColor": "{tokens.color.roles.text.primary}",
+          "borderRadius": "{tokens.radius.pill}",
+          "paddingX": 14,
+          "paddingY": 10
+        },
+        "text": {
+          "typography": "{tokens.typography.scale.small}",
+          "color": "{tokens.color.roles.text.inverse}"
+        }
+      }
+    },
+    "Skeleton": {
+      "purpose": "Loading placeholders.",
+      "style": {
+        "baseColor": "{tokens.color.roles.background.surfaceMuted}",
+        "highlightColor": "{tokens.color.roles.outline.divider}",
+        "borderRadius": "{tokens.radius.md}"
+      },
+      "rules": [
+        "Keep skeletons subtle; match card/input radii."
+      ]
+    },
+    "ReaderSurface": {
+      "purpose": "The reading canvas. Must feel like paper and stay distraction-free.",
+      "style": {
+        "backgroundColor": "{tokens.color.roles.background.app}",
+        "contentPaddingX": 24,
+        "contentPaddingY": 20,
+        "textColor": "{tokens.color.roles.text.primary}",
+        "selectionHighlight": "{tokens.color.roles.brand.primarySoft}",
+        "lineLengthRule": "Keep line length comfortable; increase side padding on large screens."
+      },
+      "rules": [
+        "Reader chrome (controls) should hide when reading; reveal on tap.",
+        "Controls use the same pill/outline language as the rest of the app.",
+        "Do not introduce new accent colors; use mint for highlights and active states."
+      ]
+    },
+    "ReaderToolbar": {
+      "purpose": "Floating controls in reader (font, translate, audio, bookmarks).",
+      "style": {
+        "container": {
+          "borderRadius": "{tokens.radius.pill}",
+          "padding": 10,
+          "backgroundColor": "{tokens.color.roles.background.surface}",
+          "borderWidth": "{tokens.border.width.hairline}",
+          "borderColor": "{tokens.color.roles.outline.subtle}",
+          "shadow": "{tokens.shadow.presets.soft}"
+        },
+        "buttons": "Use IconButton; 44dp touch targets."
+      }
+    },
+    "Popover": {
+      "purpose": "Translation/definition popover for selected text.",
+      "style": {
+        "container": {
+          "backgroundColor": "{tokens.color.roles.background.surface}",
+          "borderRadius": "{tokens.radius.lg}",
+          "borderWidth": "{tokens.border.width.hairline}",
+          "borderColor": "{tokens.color.roles.outline.subtle}",
+          "padding": 14,
+          "shadow": "{tokens.shadow.presets.soft}"
+        },
+        "title": {
+          "typography": "{tokens.typography.scale.small}",
+          "color": "{tokens.color.roles.text.primary}"
+        },
+        "body": {
+          "typography": "{tokens.typography.scale.body}",
+          "color": "{tokens.color.roles.text.primary}"
+        },
+        "actions": "Use Chip or small Buttons (pill) for quick actions like Save, Copy."
+      }
+    },
+    "FormControls": {
+      "purpose": "Switches, sliders, checkboxes, radios styled to match the pill/outline system.",
+      "style": {
+        "switch": {
+          "trackOff": "{tokens.color.roles.outline.subtle}",
+          "trackOn": "{tokens.color.roles.brand.primary}",
+          "thumb": "{tokens.color.roles.background.surface}"
+        },
+        "slider": {
+          "track": "{tokens.color.roles.outline.subtle}",
+          "trackActive": "{tokens.color.roles.brand.primary}",
+          "thumb": {
+            "size": 20,
+            "backgroundColor": "{tokens.color.roles.background.surface}",
+            "borderWidth": "{tokens.border.width.thin}",
+            "borderColor": "{tokens.color.roles.brand.primary}"
+          }
+        },
+        "checkboxRadio": {
+          "size": 20,
+          "borderWidth": "{tokens.border.width.thin}",
+          "borderColor": "{tokens.color.roles.outline.strong}",
+          "checkedFill": "{tokens.color.roles.brand.primary}"
+        }
+      },
+      "rules": [
+        "Always show strong state change (checked/on) using mint.",
+        "Avoid neon or overly saturated toggles."
+      ]
+    }
+  },
+  "patterns": {
+    "WelcomeOnboarding": {
+      "structure": [
+        "Brand header (logo + tagline)",
+        "Illustration (primary visual)",
+        "Pagination dots",
+        "Hero headline (2 lines max)",
+        "Short supporting paragraph",
+        "Primary CTA button (full width pill)"
+      ],
+      "layoutGuidelines": [
+        "Center alignment for the hero stack.",
+        "Keep CTA anchored near bottom with safe-area padding.",
+        "Illustration should occupy ~35–45% of vertical space."
+      ]
+    },
+    "HomeLibrary": {
+      "structure": [
+        "Top header: avatar + user info + icon actions",
+        "Search bar",
+        "Horizontal chip filters",
+        "Content shelf (book cards)",
+        "Section header + content",
+        "Floating bottom navigation pill"
+      ],
+      "layoutGuidelines": [
+        "Use a consistent 24dp horizontal margin.",
+        "Keep shelves horizontally scrollable; avoid tight multi-column grids on small phones.",
+        "Bottom nav should float above content; give ScrollView extra bottom padding."
+      ]
+    },
+    "BookDetails": {
+      "structure": [
+        "TopAppBar with close/back + overflow",
+        "Cover hero frame",
+        "Title + author centered",
+        "Tag chips row",
+        "Description paragraph",
+        "Bottom ActionBar with quick action + primary CTA"
+      ],
+      "layoutGuidelines": [
+        "Center the cover and title stack to feel ‘featured’.",
+        "Keep description text light and readable; don’t exceed ~5 lines before ‘Read more’.",
+        "CTA bar is mint; inner CTA is a white pill for contrast."
+      ]
+    }
+  },
+  "accessibility": {
+    "touchTargets": {
+      "minSize": 44,
+      "preferredSize": 48
+    },
+    "contrast": [
+      "Primary text on white must meet WCAG AA (use near-black).",
+      "Do not place white text directly on light mint unless mint is darkened (use brandMint.700+ or add outline)."
+    ],
+    "type": [
+      "Minimum body size 16sp.",
+      "Support dynamic type; never hard-clamp text without allowing wrapping where possible."
+    ]
+  },
+  "engineeringMappingNotes": {
+    "mobileRepoReality": {
+      "existingThemeFiles": [
+        "polyglot-reader-mobile/app/theme/colors.ts",
+        "polyglot-reader-mobile/app/theme/fonts.ts",
+        "polyglot-reader-mobile/app/theme/typography.ts"
+      ],
+      "recommendedMappingIfYouAdoptThisSystem": {
+        "colors.primary": "{tokens.color.roles.brand.primary}",
+        "colors.secondary": "{tokens.color.roles.chip.selectedBg}",
+        "colors.background": "{tokens.color.roles.background.app}",
+        "colors.surface": "{tokens.color.roles.background.surface}",
+        "colors.text": "{tokens.color.roles.text.primary}",
+        "colors.textSecondary": "{tokens.color.roles.text.secondary}",
+        "colors.border": "{tokens.color.roles.outline.default}",
+        "colors.highlight": "{tokens.color.roles.brand.primarySoft}"
+      },
+      "fontImplementation": "Use AppText/AppTextInput everywhere; set fontWeight in styles and let the wrapper map to the correct PlusJakartaSans_* variant."
+    }
+  },
+  "aiPromptingGuidelines": {
+    "whenDesigningNewScreens": [
+      "Start with AppShell padding 24dp; build a clear vertical rhythm (24dp between major sections).",
+      "Use TopAppBar + IconButtons for actions; avoid floating icons without circular affordances.",
+      "Default to Card + Chip + Button primitives; keep shapes rounded and borders subtle.",
+      "Use mint as the accent for nav/CTA/highlights only; keep everything else neutral.",
+      "Prefer 1 primary CTA per screen; secondary actions are outlined.",
+      "Keep typography hierarchy: H1/H2 for screen titles, H3 for section titles, body for content, caption for metadata."
+    ],
+    "commonMistakesToAvoid": [
+      "Overusing shadows or gradients (breaks the calm, outline-first feel).",
+      "Using sharp 6–8dp corners on major controls (should be pill or large radius).",
+      "Introducing multiple accent colors (mint should remain the hero).",
+      "Crowding screens with too many elements (this design depends on whitespace)."
+    ]
+  }
+}

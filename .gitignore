@@ -1,0 +1,53 @@
+# Past chat logs and documentation
+Past Chats/
+
+# Design screenshots and assets (not part of app code)
+Polygot Reader_screens/
+
+# Temporary files and build artifacts
+.tmp/
+*.tgz
+*.tar.gz
+
+# Uploaded test files
+polyglot-reader-backend/uploads/
+polyglot-reader-mobile/uploads/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Test results
+test-results/
+coverage/
+
+# Cache
+.cache/
+.npm/
+.yarn/

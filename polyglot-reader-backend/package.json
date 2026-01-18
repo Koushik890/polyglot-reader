@@ -1,0 +1,44 @@
+{
+  "name": "polyglot-reader-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
+    "build": "rimraf dist && tsc && node scripts/copy-assets.js",
+    "sync:ebooks": "ts-node src/jobs/syncEbookCatalog.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "adm-zip": "^0.5.16",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/helmet": "^0.0.48",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/morgan": "^1.9.10",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^24.10.1",
+    "nodemon": "^3.1.11",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
